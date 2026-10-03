@@ -129,6 +129,12 @@
   #экран-1 .первый-экран__картинка.картинка--край img { object-fit: cover; object-position: 50% 0; mask-image: linear-gradient(to bottom, black 88%, transparent); -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent); }
 }
 
+/* Маленькие телефоны по высоте (до 700 px): фото ниже, чтобы заголовок и «ответит сам мастер» лежали выше липкой панели. Режется нижняя часть (ноги и фургон), лица обоих остаются у верха кадра. */
+@media (max-width: 899px) and (max-height: 700px) {
+  #экран-1 .первый-экран__картинка { width: calc(100% + 2 * var(--отступ-блока)); max-height: 38vh; }
+  #экран-1 .первый-экран__картинка.картинка--край img { object-position: 50% 8%; }
+}
+
 /* ПРОБА A · «Карточка с красной подложкой».
    Компьютер: чёткая карточка с ровными углами, позади неё красная плита, сдвинутая вниз-вправо (как красные полосы на фургоне),
    плашка «Круглосуточно — ночью тоже» сидит на левом верхнем углу карточки. Фото целиком, без дымки и без обрезки. Телефон не меняется. */
@@ -192,6 +198,152 @@
     <div class="итог__низ">
       <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a>
     </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--решение блок--тихо светлый второй" id="экран-04" data-тип="решение" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="путь">
+    <div class="секция__шапка путь__шапка">
+      <p class="кикер">Как мы работаем</p>
+      <h2>Четыре шага — от звонка до свободной трубы</h2>
+    </div>
+    <ol class="ступени">
+      <li class="ступень"><span class="ступень__номер" aria-hidden="true">1</span><h3>Звонок</h3><p>расскажите, что случилось. Зададим несколько вопросов</p></li>
+      <li class="ступень"><span class="ступень__номер" aria-hidden="true">2</span><h3>Стоимость</h3><p>называем цену по телефону, до выезда</p></li>
+      <li class="ступень"><span class="ступень__номер" aria-hidden="true">3</span><h3>Выезд</h3><p>приезжаем, когда вы согласны</p></li>
+      <li class="ступень"><span class="ступень__номер" aria-hidden="true">4</span><h3>Прочистка и проверка</h3><p>выполняем прочистку и проверяем результат при вас: вы видите, что вода уходит</p></li>
+    </ol>
+    <div class="путь__низ">
+      <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a>
+    </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--программа блок--тихо тёмный" id="экран-05" data-тип="программа" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="способы">
+    <div class="секция__шапка способы__шапка">
+      <p class="кикер">Чем работаем</p>
+      <h2>Подбираем способ под вашу трубу</h2>
+    </div>
+    <div class="способы__тело">
+      <figure class="способы__кадр фото">
+        <img src="img/gidrodinamika.webp" width="864" height="487" alt="Форсунка на конце шланга внутри трубы: из неё расходится веер воды" loading="lazy">
+      </figure>
+      <div class="способы__колонка">
+        <ul class="способы__список">
+          <li class="способ-ряд"><span class="способ-ряд__метка" aria-hidden="true"></span><h3>Гидродинамическая прочистка</h3><p>очищаем трубы потоком воды под давлением</p></li>
+          <li class="способ-ряд"><span class="способ-ряд__метка" aria-hidden="true"></span><h3>Электромеханическая прочистка</h3><p>устраняем засор специальной прочистной техникой (тросом)</p></li>
+          <li class="способ-ряд"><span class="способ-ряд__метка" aria-hidden="true"></span><h3>Отогрев и разморозка труб</h3><p>помогаем, когда канализационные трубы замёрзли</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="способы__низ">
+      <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a>
+    </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--работы светлый второй" id="экран-06" data-тип="работы" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="выезды">
+    <div class="секция__шапка выезды__шапка">
+      <p class="кикер">Как это выглядит</p>
+      <h2>Работа, а не картинки из каталога</h2>
+    </div>
+    <div class="выезды__мозаика">
+      <div class="выезд выезд--колодец">
+        <figure class="фото выезд__кадр"><img src="img/rabota-kolodets.webp" width="900" height="675" alt="Мастер стоит в канализационном колодце и держит прочистной шланг" loading="lazy"></figure>
+        <div class="выезд__подпись"><h3>Прочистка колодца</h3><p>устраняем засор в колодце</p></div>
+      </div>
+      <div class="выезд выезд--люк">
+        <figure class="фото выезд__кадр"><img src="img/rabota-lyuk.webp" width="900" height="675" alt="Двое мастеров в спецодежде присели у открытого канализационного люка со шлангом и смотрят в камеру" loading="lazy"></figure>
+        <div class="выезд__подпись"><h3>Работа у люка</h3><p>устраняем засор в канализационной сети</p></div>
+      </div>
+      <div class="выезд выезд--гидро">
+        <figure class="фото выезд__кадр"><img src="img/rabota-gidro.webp" width="428" height="380" alt="Форсунка внутри трубы: из неё расходятся лучи воды под давлением" loading="lazy"></figure>
+        <div class="выезд__подпись"><h3>Гидродинамическая прочистка</h3><p>вода под давлением очищает стенки трубы</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--о-себе блок--тихо светлый" id="экран-07" data-тип="о-себе" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="двое">
+    <div class="двое__шапка">
+      <p class="кикер">Кто к вам приедет</p>
+      <h2>Вы говорите с тем, кто будет работать</h2>
+    </div>
+    <figure class="фото двое__кадр">
+      <img src="img/u-mashiny-3x4.webp" width="1309" height="830" alt="Валентин и Александр в рабочей форме стоят по краям у задних дверей своего фургона и смотрят в камеру" loading="lazy">
+    </figure>
+    <div class="двое__тело">
+      <p class="двое__слова">На звонок отвечает Валентин — он же и приезжает, вместе с Александром. Между вами и мастером нет ни диспетчера, ни подрядчика: вы сразу говорите с тем, кто будет работать.</p>
+      <div class="плитки">
+        <a class="плитка-звонок" href="tel:+79510317826"><span class="плитка-звонок__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+</svg></span><span class="плитка-звонок__текст"><span class="плитка-звонок__имя">Валентин</span><span class="плитка-звонок__номер">+7 951 031-78-26</span></span></a>
+        <a class="плитка-звонок" href="tel:+79015496383"><span class="плитка-звонок__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+</svg></span><span class="плитка-звонок__текст"><span class="плитка-звонок__имя">Александр</span><span class="плитка-звонок__номер">+7 901 549-63-83</span></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--прайс-лист блок--тихо тёмный" id="экран-08" data-тип="прайс-лист" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="цена">
+    <div class="секция__шапка цена__шапка">
+      <p class="кикер">Сколько стоит</p>
+      <h2>Цену называем по телефону — до выезда</h2>
+    </div>
+    <ul class="факторы">
+      <li class="фактор"><span class="фактор__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 12h15M13 6l6 6-6 6"/>
+</svg></span><h3>Длина трубы</h3><p>чем длиннее участок, тем больше работы</p></li>
+      <li class="фактор"><span class="фактор__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="6.5"/>
+  <path d="M16 16l5 5"/>
+</svg></span><h3>Доступ к трубе</h3><p>есть ли куда подойти и прочищена ли яма</p></li>
+      <li class="фактор"><span class="фактор__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 18h6M10 21h4M8 14a6 6 0 1 1 8 0l-1 2H9z"/>
+</svg></span><h3>Способ</h3><p>гидродинамика, трос или отогрев подбираем по случаю</p></li>
+    </ul>
+    <div class="полоса">
+      <p class="полоса__подпись">Едем, когда вы согласны с ценой</p>
+      <div class="полоса__кнопка">
+        <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить и узнать цену</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="блок блок--финал блок--тихо светлый" id="экран-09" data-тип="финал" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="финал">
+    <div class="финал__слова">
+      <p class="кикер">Нужна помощь?</p>
+      <h2>Позвоните — ответит сам мастер</h2>
+      <p class="финал__подзаголовок">Оренбург и пригород, круглосуточно. Расскажите, что случилось, назовём цену до выезда</p>
+      <div class="финал__кнопка">
+        <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a>
+      </div>
+    </div>
+    <div class="звонки">
+      <a class="звонок" href="tel:+79510317826"><span class="звонок__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+</svg></span><span class="звонок__текст"><span class="звонок__имя">Валентин</span><span class="звонок__номер">+7 951 031-78-26</span></span></a>
+      <a class="звонок" href="tel:+79015496383"><span class="звонок__значок" aria-hidden="true"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+</svg></span><span class="звонок__текст"><span class="звонок__имя">Александр</span><span class="звонок__номер">+7 901 549-63-83</span></span></a>
+    </div>
+  </div>
+  <div class="низ">
+    <p>Валентин · Прочистка канализации · Оренбург · 8 951 031-78-26</p>
+    <p>ИП Кудинова Галина Михайловна · ИНН 561207942523 · ОГРНИП 325565800064321</p>
   </div>
 </div>
 </section>
