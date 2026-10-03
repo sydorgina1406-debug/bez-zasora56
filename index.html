@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прочистка канализации в Оренбурге — Без засора 56</title>
+<meta name="description" content="Прочистка и разморозка канализации в Оренбурге и пригороде. Отвечает сам мастер, цену называем по телефону до выезда. Круглосуточно">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Прочистка канализации в Оренбурге — Без засора 56">
+<meta property="og:description" content="Засор в Оренбурге? Позвоните — ответит сам мастер">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=PT+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --шрифт-заголовков: Montserrat, system-ui, sans-serif;  --шрифт-текста: 'PT Sans', -apple-system, 'Segoe UI', sans-serif;
+  --цвет-фон: #FAFAF9;  --цвет-фон-2: #F0EFEC;  --цвет-фон-карточки: #FAFAF9;
+  --цвет-текст: #23262A;  --цвет-текст-мягкий: #62666B;  --цвет-текст-тихий: #74787D;
+  --цвет-акцент: #B3241F;  --цвет-акцент-тёмный: #C7443C;  --цвет-акцент-яркий: #DC5F55;  --цвет-на-акценте: #FAFAF9;
+  --цвет-акцент-глубже: #8A1A16;  --цвет-акцент-маркер: #9E1F1B;
+  --цвет-линия: #E2E0DC;
+  --цвет-тёмный-фон: #232629;  --цвет-тёмный-фон-2: #31363B;  --цвет-тёмный-текст: #FAFAF9;
+  --цвет-тёмный-фон-3: #292D31;  --цвет-тёмный-фон-4: #2D3135;
+  --цвет-тёплый: #C7443C;  --цвет-тёплый-мягкий: #E6E3DF;
+  --цвет-стекло: color-mix(in srgb, #232629 86%, transparent);
+  --тень: 0 12px 34px color-mix(in srgb, #232629 6%, transparent);
+  --тень-чип: 0 10px 30px color-mix(in srgb, #232629 12%, transparent);
+  --тень-глубокая: 0 24px 60px color-mix(in srgb, #232629 35%, transparent);
+  --тень-спутник: 0 30px 60px color-mix(in srgb, #232629 70%, transparent);
+  --тень-плиты: 0 40px 100px color-mix(in srgb, #232629 70%, transparent);
+  --кегль-h1: 33px;  --кегль-h2: clamp(28px, 4.5vw, 44px);
+  --кегль-текст: clamp(16px, 1vw, 17px);  --кегль-лид: clamp(17px, 1.1vw, 18px);
+  --кегль-мелкий: 14px;  --кегль-кикер: clamp(14px, 1.1vw, 15px);  --кегль-цифра: 30px;  --разрядка-кикера: .03em;
+  --отступ-секции: clamp(56px, 9vw, 120px);  --отступ-блока: clamp(16px, 2vw, 28px);
+  --отступ-секции-тихо: clamp(44px, 7vw, 94px);  --отступ-секции-громко: clamp(64px, 10.5vw, 140px);
+  --ширина: 1120px;  --ширина-колонки: 560px;  --радиус: 16px;  --радиус-малый: 8px;
+  --радиус-карточки: 18px;  --радиус-плитки: 22px;  --радиус-телефон: 46px;  --кнопка-радиус: 14px;
+  --радиус-модуля: 16px;  --нить: 2px;
+  --плавность: cubic-bezier(.2, .7, .2, 1);  --длительность: .25s;
+  --цвет-тёплый-тёмный: #C7443C;
+}
+@media (min-width: 900px) {
+  :root { --кегль-h1: clamp(44px, 4vw, 58px); }
+}
+:root, .светлый { --цвет-кнопки: #B3241F; --цвет-на-кнопке: #FAFAF9; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
+.тёмный { --цвет-кнопки: #C7443C; --цвет-на-кнопке: #FAFAF9; --цвет-кнопки-навёл: #AA3831; }
+
+</style>
+<script>
+(function () {
+  var ЭТАЛОН = 0.535;                  // очко Open Sans — текстовой гарнитуры утверждённых макетов
+  var ПОТОЛОК = 1.2, МЁРТВАЯ = 0.02;   // выше потолка расползается раскладка; ближе к единице не трогаем вовсе
+  var КОМПЬЮТЕР = "(min-width: 900px)";
+  var ТОКЕНЫ = ["--кегль-текст", "--кегль-лид", "--кегль-мелкий", "--кегль-кикер"];
+  var корень = document.documentElement;
+  var холст = document.createElement("canvas").getContext("2d");
+  var ждём = 0;
+
+  function мера(буква) { var м = холст.measureText(буква); return (м && м.actualBoundingBoxAscent) || 0; }
+
+  function применить() {
+    ждём = 0;
+    if (!холст) { return; }
+
+    for (var i = 0; i < ТОКЕНЫ.length; i++) { корень.style.removeProperty(ТОКЕНЫ[i]); }
+    var стиль = getComputedStyle(корень), стек = стиль.getPropertyValue("--шрифт-текста").trim();
+    if (!стек) { return; }
+    холст.font = "400 100px " + стек;
+
+    var очко = Math.max(мера("х"), мера("x")) / 100;
+    if (!(очко > 0)) { return; }
+    var k = Math.round(Math.min(ПОТОЛОК, Math.max(1, ЭТАЛОН / очко)) * 1000) / 1000;
+    if (k - 1 < МЁРТВАЯ || !matchMedia(КОМПЬЮТЕР).matches) { k = 1; }
+    корень.setAttribute("data-очко", очко.toFixed(3));      // чтобы проверка могла сказать числа вслух
+    корень.setAttribute("data-поправка", k.toFixed(3));
+    if (k === 1) { return; }
+    for (i = 0; i < ТОКЕНЫ.length; i++) {
+      var было = стиль.getPropertyValue(ТОКЕНЫ[i]).trim();
+      if (было) { корень.style.setProperty(ТОКЕНЫ[i], "calc((" + было + ") * " + k + ")"); }
+    }
+  }
+
+  применить();
+
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(применить); }
+
+  addEventListener("resize", function () { ждём = ждём || requestAnimationFrame(применить); });
+})();
+</script>
+</head>
+<body class="с-липкой-кнопкой">
+<section class="блок блок--первый-экран первый-экран--разворот светлый" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото">
+  <header class="шапка">
+    <a class="шапка__лого" href="#">Без засора 56</a>
+    <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
+</svg><span><span class="полн">Оренбург и пригород · круглосуточно</span><span class="кратко">Круглосуточно</span></span></span>
+  </header>
+  <span class="пятно пятно--1"></span><span class="пятно пятно--2"></span>
+  <div class="блок__внутри">
+    <div class="первый-экран__текст">
+      <p class="кикер"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
+</svg>Прочистка и разморозка канализации</p>
+      <h1>Засор в Оренбурге? Позвоните<span class="делитель"> —</span> <span class="хвост">ответит сам <em class="акцент">мастер</em></span></h1>
+      <p class="лид">Прочистка гидродинамикой и тросом, отогрев замёрзших труб. Квартиры, частные дома, кафе, магазины</p>
+      <ul class="список-иконок">
+        <li><i class="галка"></i><span>Отвечает мастер — без диспетчера и подрядчика: говорите с тем, кто приедет</span></li>
+        <li><i class="галка"></i><span>Цена по телефону — называем до выезда, после вопросов про трубу и доступ к ней</span></li>
+        <li><i class="галка"></i><span>Круглосуточно — на ночные вызовы выезжаем</span></li>
+      </ul>
+      <div class="первый-экран__действие"><a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a></div>
+    </div>
+    <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .28">
+      <picture><source media="(max-width: 899px)" srcset="img/u-mashiny-3x4.webp"><img src="img/u-mashiny-3x4.webp" alt="Валентин и Александр в рабочей форме стоят у своего фургона и смотрят в камеру" data-лицо="50,22" fetchpriority="high"></picture>
+      <div class="чип чип--ролик парит парит--2"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M12 7v5l3.5 2"/>
+</svg><span><b>Круглосуточно</b> — ночью тоже</span></div>
+    </figure>
+  </div>
+</section>
+<style>
+/* Фото двух мастеров почти квадратное: на телефоне показываем его целиком, во всю ширину, без обрезки по бокам и без дымки поверх лиц; тает только самый низ. */
+@media (max-width: 899px) {
+  #экран-1 .первый-экран__картинка { aspect-ratio: 1309 / 1202; margin-bottom: .5em; }
+  #экран-1 .первый-экран__картинка.картинка--край img { object-fit: cover; object-position: 50% 0; mask-image: linear-gradient(to bottom, black 88%, transparent); -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent); }
+}
+
+/* ПРОБА A · «Карточка с красной подложкой».
+   Компьютер: чёткая карточка с ровными углами, позади неё красная плита, сдвинутая вниз-вправо (как красные полосы на фургоне),
+   плашка «Круглосуточно — ночью тоже» сидит на левом верхнем углу карточки. Фото целиком, без дымки и без обрезки. Телефон не меняется. */
+@media (min-width: 900px) {
+  #экран-1 { --свой-сдвиг: clamp(16px, 1.8vw, 28px); --свой-ширина: min(100% - 7rem, 1520px);
+    min-height: 100vh; padding-block: 0; display: flex; flex-direction: column; }
+  #экран-1 .шапка { padding-inline: max(3.5rem, calc((100% - 1520px) / 2)); }
+  #экран-1 .пятно { display: none; }
+
+  #экран-1 .блок__внутри { flex: 1; width: var(--свой-ширина); margin-inline: auto; padding-block: clamp(20px, 3.5vh, 44px) clamp(28px, 5vh, 56px);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(32px, 4vw, 72px); align-items: center; align-content: center; }
+
+  #экран-1 .первый-экран__картинка { order: 0; margin: 0; min-height: 0; aspect-ratio: 1309 / 1202; justify-self: end; align-self: center;
+    width: min(100% - var(--свой-сдвиг), calc((100vh - 3.5rem - 7rem) * 1.0889));
+    position: relative; isolation: isolate; border-radius: var(--радиус-плитки); overflow: visible; }
+  #экран-1 .первый-экран__картинка::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: var(--радиус-плитки);
+    transform: translate(var(--свой-сдвиг), var(--свой-сдвиг)); background: var(--цвет-акцент); }
+  #экран-1 .первый-экран__картинка.картинка--край img { position: static; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;
+    mask-image: none; -webkit-mask-image: none; border-radius: var(--радиус-плитки); box-shadow: var(--тень-глубокая); display: block; }
+
+  #экран-1 .чип--ролик { right: auto; left: calc(-1 * clamp(18px, 2vw, 32px)); top: clamp(16px, 2vw, 28px);
+    font-size: var(--кегль-лид); padding: .7em 1.15em; box-shadow: var(--тень-чип); animation: none;
+    background: var(--цвет-фон); color: var(--цвет-текст); border: 1px solid var(--цвет-линия); }
+  #экран-1 .чип--ролик .иконка { color: var(--цвет-акцент); width: 1.15em; height: 1.15em; }
+}
+</style>
+<section class="блок блок--боль блок--тихо светлый второй" id="экран-02" data-тип="боль" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="для-кого">
+    <div class="секция__шапка для-кого__шапка">
+      <p class="кикер">С чем к нам обращаются</p>
+      <h2>Работаем в квартирах, домах, колодцах и на объектах</h2>
+    </div>
+    <ul class="ситуации">
+      <li class="ситуация">
+        <div class="ситуация__текст"><h3>Колодец</h3><p>устраняем засор в колодце</p></div>
+        <figure class="фото ситуация__кадр"><img src="img/kolodets.webp" alt="Мастер стоит в канализационном колодце и держит прочистной шланг" loading="lazy"></figure>
+      </li>
+      <li class="ситуация"><h3>Квартира</h3><p>вода уходит медленно или стоит в раковине, ванне, унитазе</p></li>
+      <li class="ситуация"><h3>Частный дом, коттедж и дача</h3><p>забился выпуск, вода не уходит, засор после зимы или простоя</p></li>
+      <li class="ситуация"><h3>Кафе и ресторан</h3><p>жир и остатки в трубах, нельзя ждать до утра</p></li>
+      <li class="ситуация"><h3>Магазин, производство, завод</h3><p>устраняем засор на объекте</p></li>
+      <li class="ситуация"><h3>Замёрзшая труба</h3><p>отогреваем замёрзшую канализационную трубу</p></li>
+    </ul>
+  </div>
+</div>
+</section>
+<section class="блок блок--что-получите светлый" id="экран-03" data-тип="что-получите" data-вёрстка="своя">
+<div class="блок__внутри">
+  <div class="итог">
+    <div class="секция__шапка итог__шапка">
+      <p class="кикер">Что в итоге</p>
+      <h2>Вода снова уходит — и вы знаете цену до приезда</h2>
+    </div>
+    <ul class="результаты">
+      <li class="результат"><span class="результат__галка" aria-hidden="true"></span><h3>Свободная труба</h3><p>канализация работает, вода уходит</p></li>
+      <li class="результат"><span class="результат__галка" aria-hidden="true"></span><h3>Цена до выезда</h3><p>называем по телефону после вопросов про метраж и доступ к трубе</p></li>
+      <li class="результат"><span class="результат__галка" aria-hidden="true"></span><h3>Разговор с мастером</h3><p>на звонок отвечает тот, кто потом приедет</p></li>
+      <li class="результат"><span class="результат__галка" aria-hidden="true"></span><h3>Подходящий способ</h3><p>гидродинамикой, тросом или отогревом, смотря что случилось</p></li>
+    </ul>
+    <div class="итог__низ">
+      <a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a>
+    </div>
+  </div>
+</div>
+</section>
+<div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="tel:+79510317826">Позвонить Валентину</a></div>
+<script>
+(function () {
+  var СПИТ = "главная-на-виду";                       // класс на body; правило сна — в стилях
+  var кнопка = document.querySelector(".первый-экран__действие .кнопка--главная");
+  if (!кнопка || !window.IntersectionObserver) { return; }
+
+  function пометить(на_виду) { document.body.classList.toggle(СПИТ, !!на_виду); }
+
+  var б = кнопка.getBoundingClientRect();
+  пометить(б.bottom > 0 && б.top < (window.innerHeight || 0));
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { document.body.classList.add("панель-с-переходом"); });
+  });
+
+  new IntersectionObserver(function (записи) {
+    пометить(записи[записи.length - 1].isIntersecting);
+  }, { threshold: 0 }).observe(кнопка);
+})();
+</script>
+</body>
+</html>
